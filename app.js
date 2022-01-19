@@ -43,6 +43,7 @@ app.use("/api/v1/pool", poolRouter);
 app.get("/", (req, res) => {
   res.status(200).json({
     message: "Hello from server Port 8080",
+    special: "Hello Da huang",
     App: "ptolemy",
   });
 });
