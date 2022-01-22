@@ -38,7 +38,7 @@ const jobseekerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  addressState: {
+  addressZipcode: {
     type: String,
     required: true,
   },
