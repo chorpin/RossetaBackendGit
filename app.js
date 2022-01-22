@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const poolRouter = require("./routes/poolRouter");
+const jobseekerRouter = require("./routes/jobseekerRouter");
 
 const app = express();
 app.use(express.json());
@@ -9,7 +10,6 @@ if (process.env.NODE_ENV === "development") {
 
   app.use(function (req, res, next) {
     console.log("Time:", Date.now());
-    console.log("卧槽");
 
     next();
   });
@@ -39,11 +39,10 @@ app.post("/api/pool", (req, res) => {
 });
 */
 app.use("/api/v1/pool", poolRouter);
-
+app.use("/api/v1/jobseeker", jobseekerRouter);
 app.get("/", (req, res) => {
   res.status(200).json({
     message: "Hello from server Port 8080",
-    special: "Hello Da huang",
     App: "ptolemy",
   });
 });
