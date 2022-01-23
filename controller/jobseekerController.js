@@ -24,7 +24,7 @@ exports.getAllJobseeker = async (req, res) => {
     res.status(200).json({
       quantity: allJobseeker.length,
       status: "Catching all jobseekers Info",
-      fish: allJobseeker,
+      Jobseekers: allJobseeker,
     });
   } catch (err) {
     res.status(400).json({
