@@ -1,3 +1,4 @@
+const cors = require("cors");
 const express = require("express");
 const morgan = require("morgan");
 const poolRouter = require("./routes/poolRouter");
@@ -26,7 +27,8 @@ if (process.env.NODE_ENV === "production") {
     next();
   });
 }
-
+app.use(cors());
+app.options("*", cors());
 /*
 app.post("/api/pool", (req, res) => {
   console.log(req.body);
