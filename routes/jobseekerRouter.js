@@ -12,5 +12,5 @@ router
   .route("/")
   .post(jobseekerController.postToJobseeker)
   .get(jobseekerController.getAllJobseeker);
-
+router.route("/:id").patch(jobseekerController.updateOneJobseeker);
 module.exports = router;

@@ -34,3 +34,37 @@ exports.getAllJobseeker = async (req, res) => {
     console.log("err from getAllJobseeker:", err);
   }
 };
+exports.deleteOneJobseeker = async (req, res) => {
+  try {
+  } catch (err) {
+    res.status(400).json({
+      status: "Updated specific jobseeker Info failed",
+      message: err,
+    });
+    console.log("err from getAllJobseeker:", err);
+  }
+};
+
+exports.updateOneJobseeker = async (req, res) => {
+  try {
+    const jobseeker = await JobseekerModel.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    res.status(200).json({
+      status: "success",
+      data: {
+        jobseeker,
+      },
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "Updated specific jobseeker Info failed",
+      message: err,
+    });
+    console.log("err from getAllJobseeker:", err);
+  }
+};
