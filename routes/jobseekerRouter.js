@@ -12,5 +12,8 @@ router
   .route("/")
   .post(jobseekerController.postToJobseeker)
   .get(jobseekerController.getAllJobseeker);
-router.route("/:id").patch(jobseekerController.updateOneJobseeker);
+router
+  .route("/:id")
+  .patch(jobseekerController.updateOneJobseeker)
+  .delete(jobseekerController.deleteOneJobseeker);
 module.exports = router;
