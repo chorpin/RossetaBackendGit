@@ -19,22 +19,4 @@ const poolSchema = new mongoose.Schema({
 
 const PoolContentModel = mongoose.model("PoolContentModel", poolSchema);
 
-/*
-
-const firstThought = new PoolContentModel({
-  purpose: "Wanna Go home",
-  level: -3,
-});
-
-firstThought
-  .save()
-  .then((doc) => {
-    console.log(doc);
-  })
-  .catch((err) => {
-    console.log("Error!!", err);
-  });
-  
-*/
-
 module.exports = PoolContentModel;

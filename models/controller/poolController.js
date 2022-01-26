@@ -1,4 +1,4 @@
-const PoolContentModel = require("./../models/PoolContentModel.js");
+const PoolContentModel = require("../../models/PoolContentModel");
 
 exports.postToPool = async (req, res) => {
   try {

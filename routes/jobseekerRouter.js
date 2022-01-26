@@ -1,5 +1,5 @@
 const express = require("express");
-const jobseekerController = require("./../controller/jobseekerController");
+const jobseekerController = require("./../models/controller/jobseekerController.js");
 const router = express.Router();
 
 router.param("id", (req, res, next, value) => {

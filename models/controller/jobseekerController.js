@@ -1,4 +1,4 @@
-const JobseekerModel = require("./../models/JobseekerModel.js");
+const JobseekerModel = require("../../models/JobseekerModel.js");
 
 exports.postToJobseeker = async (req, res) => {
   try {

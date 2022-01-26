@@ -1,5 +1,5 @@
 const express = require("express");
-const poolController = require("./../controller/poolController");
+const poolController = require("./../models/controller/poolController.js");
 const router = express.Router();
 
 router.param("id", (req, res, next, value) => {
