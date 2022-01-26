@@ -36,9 +36,14 @@ exports.getAllJobseeker = async (req, res) => {
 };
 exports.deleteOneJobseeker = async (req, res) => {
   try {
+    await JobseekerModel.findByIdAndDelete(req.params.id);
+    res.status(204).json({
+      status: "success",
+      data: null,
+    });
   } catch (err) {
     res.status(400).json({
-      status: "Updated specific jobseeker Info failed",
+      status: "Delete specific jobseeker Info failed",
       message: err,
     });
     console.log("err from getAllJobseeker:", err);
